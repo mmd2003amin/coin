@@ -53,4 +53,19 @@
     .menu-items li{
         @apply mb-5 text-[12px] 500:text-base
     }
+
+    .buttons-banner div {
+        @apply rounded-lg flex justify-center items-center h-12 sm:h-14 1120:h-16 cursor-pointer
+    }
+
+    .start-banner {
+        grid-column-start : 1;
+        grid-column-end : 3;
+        @apply bg-blue-500 text-white font-vazirMedium 
+    }
+
+    .app-banner {
+        @apply border border-slate-900 border-solid mt-2 text-[12px] p-1
+         flex items-center font-vazirRegular sm:text-[15px] sm:font-vazirMedium
+    }
 }
