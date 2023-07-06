@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: vazirMedium;
+        src: url("./font/fonts/webfonts/Vazirmatn-Medium.woff2");
+    },
+
+    @font-face {
+        font-family: vazirBold;
+        src: url("./font/fonts/webfonts/Vazirmatn-Bold.woff2");
+    }
+
+    @font-face {
+        font-family: vazirExtraBold;
+        src: url("./font/fonts/webfonts/Vazirmatn-ExtraBold.woff2");
+    }
+
+    @font-face {
+        font-family: vazirRegular;
+        src: url("./font/fonts/webfonts/Vazirmatn-Regular.woff2");
+    }
+}
+
+@layer components {
+    .items-navbar li{
+        @apply flex items-center ml-7 hover:text-[#222] cursor-pointer transition-all relative text-sm xl:text-base
+    }
+    .buttons-navbar div {
+        @apply border border-gray-200 border-solid rounded-lg p-1.5 w-20 500:ml-2 text-center font-vazirRegular cursor-pointer
+    }
+    .after-navbar li {
+        content: '';
+        width: 0;
+        height: 2px;
+        margin: 0 auto;
+        background-color: #423ffc;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom:0;
+        top : 50px
+    }
+
+    .after-navbar li:hover {
+        @apply w-full animate-borderItemsNavbar shadow-shadowItemsNavbar
+    }
+
+    .menu-items li{
+        @apply mb-5 text-[12px] 500:text-base
+    }
+}
