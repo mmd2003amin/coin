@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navbar from "./navbar";
 import Menu from "./menu";
 import Banner from "./banner";
+import CoinList from "./coinList";
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar open={openMenu} setOpen={setOpenMenu}/>
       <Menu open={openMenu} setOpen={setOpenMenu} />
       <Banner />
+      <CoinList />
     </div>
   );
 };
