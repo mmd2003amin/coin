@@ -68,4 +68,20 @@
         @apply border border-slate-900 border-solid mt-2 text-[12px] p-1
          flex items-center font-vazirRegular sm:text-[15px] sm:font-vazirMedium
     }
+
+    .list-coin {
+        @apply flex justify-between p-1 shadow-md sm:p-3 items-center bg-slate-100 1120:bg-white h-20 rounded-md mb-3 sm:mb-8
+    }
+
+    .about-list-coin span {
+        
+    }
+
+    .Positive {
+        @apply w-fit h-8 p-2 text-green-700 bg-green-200 rounded-md text-center sm:text-[15px]
+    }
+
+    .negative {
+        @apply w-fit h-8 p-2 text-red-700 bg-red-200 rounded-md text-center sm:text-[15px]
+    }
 }
