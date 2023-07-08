@@ -8,7 +8,7 @@ const Navbar = ({open , setOpen}) => {
     const [ dark , setDark ] = useState(false);
 
     return (
-        <div className="sticky top-0 bg-white shadow-xl flex justify-between h-20 font-vazirMedium text-[#777]">
+        <div className="sticky top-0 z-20 bg-white shadow-xl flex justify-between h-20 font-vazirMedium text-[#777]">
 
             <div className="flex items-center mr-14">
                 <img src={logo} alt="Logo" className="w-24"/>

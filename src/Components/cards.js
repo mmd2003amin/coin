@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Card from './card';
+import { Card }from './Items';
 import { dataCarts } from './data';
 
 const Cards = () => {

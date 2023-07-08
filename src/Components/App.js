@@ -5,6 +5,7 @@ import Menu from "./menu";
 import Banner from "./banner";
 import CoinList from "./coinList";
 import Cards from "./cards"
+import Footer from "./footer";
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
       <Banner />
       <CoinList />
       <Cards />
+      <Footer />
     </div>
   );
 };

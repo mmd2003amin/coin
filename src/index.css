@@ -73,6 +73,10 @@
         @apply flex justify-between p-1 shadow-md sm:p-3 items-center bg-slate-100 1120:bg-white h-20 rounded-md mb-3 sm:mb-8
     }
 
+    .footer-items li {
+        @apply mb-1.5 1120:mb-2.5
+    }
+
     .about-list-coin span {
         
     }
