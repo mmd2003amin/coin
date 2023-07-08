@@ -73,9 +73,10 @@ const CoinList = () => {
             </div>
 
             {/* ShowAllBotton */}
-            <div onClick={() => setShowAll(true)} className="max-w-[80%] 500:max-w-[50%] 1120:max-w-[20%] bg-blue-500 cursor-pointer hover:bg-blue-600
-             font-vazirMedium text-white 1120:text-[16px] h-14 rounded-lg flex justify-center items-center mx-auto mt-10 mb-5 transition-all">
-                <p>مشاهده ارزهای بیشتر</p>
+            <div onClick={() => setShowAll(!showAll)} className={`${showAll ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"} max-w-[80%] 500:max-w-[50%] 1120:max-w-[20%] cursor-pointer
+             font-vazirMedium text-white 1120:text-[16px] h-14 rounded-lg flex justify-center items-center mx-auto mt-10 mb-5 transition-all`}>
+                <p className={`${showAll ? "hidden" : "flex"}`}>مشاهده ارزهای بیشتر</p>
+                <p className={`${showAll ? "flex" : "hidden"}`}>بستن</p>
             </div>
         </div>
     );
