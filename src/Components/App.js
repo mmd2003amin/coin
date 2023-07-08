@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import Menu from "./menu";
 import Banner from "./banner";
 import CoinList from "./coinList";
+import Cards from "./cards"
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
       <Menu open={openMenu} setOpen={setOpenMenu} />
       <Banner />
       <CoinList />
+      <Cards />
     </div>
   );
 };
