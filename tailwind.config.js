@@ -23,6 +23,7 @@ module.exports = {
       boxShadow : {
         shadowItemsNavbar : "3px 4px 30px 3px rgba(24,3,255,0.5)"
       },
+
       screens : {
         "1120" : "1120px",
         "500" : "500px"
