@@ -2,7 +2,7 @@ import React,{ useEffect , useState } from 'react';
 
 import { API } from './API';
 
-const CoinList = () => {
+const CoinList = ({dark}) => {
 
     const [ coin , setCoin ] = useState([]);
     const [ search , setSearch ] = useState("");
@@ -21,20 +21,21 @@ const CoinList = () => {
     const minPage = searchCoins.slice(0 , 6);
 
     return (
-        <div className="mt-20 sm:mt-36 font-vazirMedium text-slate-900 text-sm">
+        <div className={`${dark ? "dark" : "text-slate-900"} mt-20 sm:mt-36 font-vazirMedium text-sm`}>
 
             {/* Search */}
             <div className="max-w-[80%] 500:max-w-[60%] 1120:max-w-[50%] mx-auto">
-                <input type="text" value={search} onChange={searchHandler} placeholder="جستجو ..." className="w-full
-                 outline-none bg-slate-200 h-12 500:h-14 1120:h-16 pr-2 rounded-lg placeholder:text-slate-900 1120:text-[16px]"/>
+                <input type="text" value={search} onChange={searchHandler} placeholder="جستجو ..." 
+                 className={`${dark ? "bg-slate-800 text-white placeholder:text-slate-200" : "bg-slate-200 placeholder:text-slate-900"} w-full
+                 outline-none h-12 500:h-14 1120:h-16 pr-2 rounded-lg 1120:text-[16px]`}/>
             </div>
 
             {/* ListCoin */}
             <div className="border border-solid border-gray-200 rounded-lg p-2.5 max-w-[90%] sm:max-w-[70%]
              shadow-xl mx-auto mt-10">
 
-                <div className="hidden 1120:flex justify-between text-[16px] about-list-coin bg-slate-100 rounded-md
-                 m-3 p-5">
+                <div className={`${dark ? "bg-slate-800" : "bg-slate-100"} hidden 1120:flex justify-between text-[16px] about-list-coin rounded-md
+                 m-3 p-5`}>
                     <span>نماد</span>
                     <span>نام ارز</span>
                     <span>آخرین‌قیمت</span>
@@ -43,7 +44,7 @@ const CoinList = () => {
 
                 ‌{coin && showAll ? 
                     searchCoins.map(item => 
-                        <div key={Math.random() * 100} className="list-coin">
+                        <div key={Math.random() * 100} className={`${dark ? "bg-slate-900 shadow-xl" : "bg-slate-100 1120:bg-white"} list-coin`}>
                             <img src={item.image} alt="logo-coin" className="w-12 sm:w-14"/>
                             <div className="flex items-center">
                                 <span className="hidden sm:flex sm:text-sm text-gray-500 ml-4">{item.symbol}</span>
@@ -57,7 +58,7 @@ const CoinList = () => {
                 ) 
                 :  
                     minPage.map(item => 
-                        <div key={Math.random() * 100} className="list-coin">
+                        <div key={Math.random() * 100} className={`${dark ? "bg-slate-900 shadow-xl" : "bg-slate-100 1120:bg-white"} list-coin`}>
                             <img src={item.image} alt="logo-coin" className="w-12 sm:w-14" />
                             <div className="flex items-center">
                                 <span className="hidden sm:flex sm:text-sm text-gray-500 ml-4">{item.symbol}</span>

@@ -26,7 +26,7 @@
 
 @layer components {
     .items-navbar li{
-        @apply flex items-center ml-7 hover:text-[#222] cursor-pointer transition-all relative text-sm xl:text-base
+        @apply flex items-center ml-7 cursor-pointer transition-all relative text-sm xl:text-base
     }
     .buttons-navbar div {
         @apply border border-gray-200 border-solid rounded-lg p-1.5 w-20 500:ml-2 text-center font-vazirRegular cursor-pointer
@@ -65,7 +65,7 @@
     }
 
     .app-banner {
-        @apply border border-slate-900 border-solid mt-2 text-[12px] p-1
+        @apply border border-solid mt-2 text-[12px] p-1
          flex items-center font-vazirRegular sm:text-[15px] sm:font-vazirMedium
     }
 
@@ -77,15 +77,15 @@
         @apply mb-1.5 1120:mb-2.5
     }
 
-    .about-list-coin span {
-        
-    }
-
     .Positive {
         @apply w-fit h-8 p-2 text-green-700 bg-green-200 rounded-md text-center sm:text-[15px]
     }
 
     .negative {
         @apply w-fit h-8 p-2 text-red-700 bg-red-200 rounded-md text-center sm:text-[15px]
+    }
+
+    .dark {
+        @apply bg-slate-900 text-zinc-50
     }
 }

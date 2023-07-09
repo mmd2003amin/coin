@@ -10,15 +10,16 @@ import Footer from "./footer";
 const App = () => {
 
   const [openMenu , setOpenMenu] = useState(false);
+  const [ dark , setDark ] = useState(false);
 
   return (
-    <div dir="rtl">
-      <Navbar open={openMenu} setOpen={setOpenMenu}/>
-      <Menu open={openMenu} setOpen={setOpenMenu} />
-      <Banner />
-      <CoinList />
-      <Cards />
-      <Footer />
+    <div dir="rtl" className={`${dark ? "dark" : ""}`}>
+      <Navbar open={openMenu} setOpen={setOpenMenu} dark={dark} setDark={setDark}/>
+      <Menu open={openMenu} setOpen={setOpenMenu} dark={dark} setDark={setDark}/>
+      <Banner dark={dark} />
+      <CoinList dark={dark} />
+      <Cards dark={dark} />
+      <Footer dark={dark} />
     </div>
   );
 };

@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { FooterItems } from './Items';
 import { dataFooter } from './data';
 
-const Footer = () => {
+const Footer = ({dark}) => {
     const [ data , setData ] = useState(dataFooter);
 
     return (
-        <div className="grid grid-cols-1 500:grid-cols-2 1120:grid-cols-4 gap-12 mx-auto max-w-[90%] sm:max-w-[80%]
-         bg-slate-100 rounded-md mt-16 text-center p-5 mb-3">
+        <div className={`${dark ? "bg-slate-800 text-white" : "bg-slate-100 mb-5"} grid grid-cols-1 500:grid-cols-2 
+         1120:grid-cols-4 gap-12 mx-auto max-w-[90%] sm:max-w-[80%] rounded-md mt-16 text-center p-5`}>
                 {data.map(item => 
                     <FooterItems key={Math.random() * 100} header={item.header} item1={item.item1}
                      item2={item.item2} item3={item.item3} item4={item.item4} item5={item.item5} item6={item.item6}    

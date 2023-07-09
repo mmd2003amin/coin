@@ -1,15 +1,15 @@
 import React from 'react';
 
 import logo from "../images/logo-banner.webp"
-import { Android, IOS } from './SVG';
+import { AndroidDark, AndroidLight, IOSDark, IOSLight } from './SVG';
 
-const Banner = () => {
+const Banner = ({dark}) => {
     return (
-        <div className="mt-16 flex 1120:max-w-[85%] 1120:mx-auto">
+        <div className={`${dark ? "dark" : "text-black" } mt-16 flex 1120:max-w-[85%] 1120:mx-auto`}>
 
             <div className=" 1120:w-[60%]">
-                <h1 className="font-vazirExtraBold text-2xl text-gray-800 mx-auto mb-8 max-w-[90%] 500:max-w-[50%]
-                 1120:max-w-[70%] 500:mr-16 500:ml-0 sm:text-[28px] 1120:text-[35px] leading-relaxed">
+                <h1 className={`${dark ? "dark" : "text-gray-800" } font-vazirExtraBold text-2xl mx-auto mb-8 max-w-[90%] 500:max-w-[50%]
+                 1120:max-w-[70%] 500:mr-16 500:ml-0 sm:text-[28px] 1120:text-[35px] leading-relaxed`}>
                     صرافی ارز دیجیتال همتاپی
                     خرید و فروش آسان ارزهای دیجیتال
                 </h1>
@@ -26,13 +26,19 @@ const Banner = () => {
 
                     <div className="start-banner">شروع کنید</div>
 
-                    <div className="app-banner">
-                        <span className="ml-2"><IOS /></span>
+                    <div className={`${dark ? "border-white" : "border-slate-900"} app-banner`}>
+                        <span className="ml-2">
+                            <span className={`${dark ? "flex" : "hidden"}`}><IOSLight /></span>
+                            <span className={`${dark ? "hidden" : "flex"}`}><IOSDark /></span>
+                        </span>
                         <p>دانلود وب اپلیکیشن IOS</p>
                     </div>
 
-                    <div className="app-banner">
-                        <span className="ml-2"><Android /></span>
+                    <div className={`${dark ? "border-white" : "border-slate-900"} app-banner`}>
+                        <span className="ml-2">
+                            <span className={`${dark ? "flex" : "hidden"}`}><AndroidLight /></span>
+                            <span className={`${dark ? "hidden" : "flex"}`}><AndroidDark /></span>
+                        </span>
                         <p>دانلود وب اپلیکیشن Android</p>
                     </div>
 
